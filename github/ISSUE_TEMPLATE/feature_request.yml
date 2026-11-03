@@ -1,0 +1,28 @@
+name: Feature request
+description: Describe a customer or operator problem and a focused improvement.
+title: '[Feature]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        v0.1 is one business and one owner per deployment. Assignment labels are not staff permissions.
+        Do not include customer data, private business material, or credentials.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Explain who is affected and what they cannot do today.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Smallest useful outcome
+      description: Describe the behavior you want and how you would know it works.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and tradeoffs
+      description: Include workarounds and any privacy, security, migration, or provider implications.

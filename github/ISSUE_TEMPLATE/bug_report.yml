@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data.
+title: '[Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For vulnerabilities, use the private reporting instructions in SECURITY.md.
+        Never include customer records, access keys, session cookies, tracking links, or .dev.vars.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Explain the actual result and the result you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use a minimal synthetic example. Remove secrets from screenshots and logs.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, operating system, Node version, and local or hosted deployment. No account IDs or secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Checks and extra context
+      description: Include relevant redacted command output and workarounds, if any.
