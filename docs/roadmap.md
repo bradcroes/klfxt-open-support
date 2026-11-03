@@ -4,12 +4,12 @@ This is a direction for discussion, not a delivery promise. The project is an ea
 
 ## Current review scope
 
-The [README](../README.md) and [API contract](api-contract.md) describe v0.1: NL/EN intake and tracking, a single-owner desk, D1 storage, resolved-request retention, optional owner notifications, and hosted booking/payment links. The [release checklist](release-checklist.md) records what has actually been verified and approved. No public release or production adoption is claimed.
+The [README](../README.md) and [API contract](api-contract.md) describe v0.1: NL/EN intake and tracking, a single-owner desk, D1 storage, resolved-request retention, optional owner notifications, and hosted booking/payment links. The [release checklist](release-checklist.md) records what has actually been verified and approved. No tagged version, GitHub Release, or production adoption is claimed.
 
 ## Next verification and adoption
 
 1. Completed locally: security and customer/owner journey review, clean-folder installation, synthetic screenshots, dependency notices, and explicit owner approval of contents and Apache-2.0. See the verification record.
-2. The public repository has been created under bradcroes; finish source upload and verify hosted CI. Record the actual result before claiming a hosted check passed.
+2. Completed on 3 November 2026: publish all 66 approved source files under bradcroes and verify passing push, pull-request and main-branch CI. See the [verification record](verification.md) for the source identity and actual runs.
 3. Establish release/support practices and welcome useful external contributions. Hosted deployment requires its own resource and cost approval.
 
 ## Possible later work

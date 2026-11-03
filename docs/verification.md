@@ -1,6 +1,6 @@
-# Local verification record
+# Verification record
 
-Review date: **2 November 2026**. Version: **0.1.0 pre-release review copy**. These results concern the locally reviewed source, not a hosted production service or independent security certification. The owner approved the public contents and Apache-2.0 license on 2 November 2026. The exact public files are listed in `PUBLIC-FILES.md`; the review archive has a separate SHA-256 checksum.
+Review date: **2 November 2026**. Version: **0.1.0 pre-release alpha**. The local review below was followed by source publication and GitHub CI verification on 3 November 2026. These checks do not establish hosted production operation or independent security certification. The owner approved the public contents and Apache-2.0 license on 2 November 2026. The exact public files are listed in `PUBLIC-FILES.md`; the review archive has a separate SHA-256 checksum.
 
 ## Completed checks
 
@@ -19,8 +19,14 @@ Tests cover capability isolation, customer/internal-note separation, missing con
 
 Notification tests simulate provider failure and concurrent delivery: tickets remain stored, customer content is not sent in the notification, retries use an idempotency key, exhausted leases become visible failures, and a deliberate owner retry recovers an exhausted job. Editor tests ensure refreshes and replies cannot silently overwrite another version while preserving a local property draft. A subsequent source review found no remaining high- or medium-priority finding in the reviewed scope; this does not establish absence of vulnerabilities.
 
+## Source publication and GitHub CI — 3 November 2026
+
+The [public repository](https://github.com/bradcroes/klfxt-open-support) contains all 66 approved files. After restoring their intended paths, every content hash and file mode matched the reviewed source snapshot. The resulting source tree was `766801f87ebaf596c871fe428ad212d6befe1440`, merged in [pull request #1](https://github.com/bradcroes/klfxt-open-support/pull/1).
+
+[Push CI](https://github.com/bradcroes/klfxt-open-support/actions/runs/41674304491), [pull-request CI](https://github.com/bradcroes/klfxt-open-support/actions/runs/41674304737), and [main-branch CI](https://github.com/bradcroes/klfxt-open-support/actions/runs/41674482892) passed. Each ran a locked dependency installation on Node 24, strict TypeScript, formatting, public-file checks, all 17 automated tests, and the production build. These are source-validation checks; they do not deploy the application. Subsequent documentation updates record this evidence without changing application behavior.
+
 ## Not established by these checks
 
-No GitHub-hosted CI run, public release, hosted deployment, production database, HTTPS end-to-end session test, scheduled production cleanup, real email delivery, payment, booking, backup restoration, external penetration test, or real-user pilot has been completed for this project. Provider delivery is mocked in automated tests; outgoing mail stays disabled locally.
+No versioned GitHub release, hosted deployment, production database, HTTPS end-to-end session test, scheduled production cleanup, real email delivery, payment, booking, backup restoration, external penetration test, or real-user pilot has been completed for this project. Provider delivery is mocked in automated tests; outgoing mail stays disabled locally.
 
 The MVP supports one business and one owner per deployment. It has no staff accounts, attachments, inbound mailbox integration, automatic customer email, payment/booking synchronization, customer self-service export, or tracking-link recovery. Hosting and real personal-data intake require the separate operational checks in the [deployment runbook](deployment.md) and [release checklist](release-checklist.md).
